@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <PackageId>Gravatar</PackageId>
+    <Version>1.0.0</Version>
+    <License>MIT</License>
+    <Authors>Luiz Felipe Fernandes</Authors>
+    <PackageDescription>Extensions for Gravatar</PackageDescription>
+    <Description>Extensions for Gravatar</Description>
+    <RepositoryUrl>https://www.github.com/luizfelipewd/Gravatar</RepositoryUrl>
+    <PackageProjectUrl>https://www.github.com/luizfelipewd/Gravatar</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>Gravatar</PackageTags>
+    <Title>Gravatar Extensions</Title>
+    <Summary>Extensions for Gravatar</Summary>
+
+
+  </PropertyGroup>
+
+</Project>
