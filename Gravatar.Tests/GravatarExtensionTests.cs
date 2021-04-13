@@ -8,16 +8,18 @@ namespace Gravatar.Tests
         [TestCategory("Gravatar Tests")]
         [TestMethod("Should Validate Gravatar Extension")]
 
-        [DataRow(null, false)]
-        [DataRow("", false)]
-        [DataRow("a@b", false)]
-        [DataRow("teste@email.com", false)]
-        [DataRow("luizfelipewd@hotmail.com", true)]
+        [DataRow(null, 200, false)]
+        [DataRow("", 200, false)]
+        [DataRow("a@b", 200, false)]
+        [DataRow("teste@email.com", 200, false)]
+        [DataRow("luizfelipewd@hotmail.com", null, true)]
+        [DataRow("luizfelipewd@hotmail.com", 200, true)]
 
-        public void ShouldValidateGravatar(string email, bool status)
+        public void ShouldValidateGravatar(string email, int? size, bool status)
         {
-            var result = "https://www.gravatar.com/avatar/854fb6d434c4a53448093361c82d5e07";
-            Assert.AreEqual(email.ToGravatar() == result, status);
+            var imageSize = size.HasValue ? size.Value.ToString() : "80";
+            var result = $"https://www.gravatar.com/avatar/854fb6d434c4a53448093361c82d5e07?s={imageSize}";
+            Assert.AreEqual(email.ToGravatar(size ?? 80) == result, status);
         }
     }
 }
